@@ -1,0 +1,24 @@
+when you write code in ts it gets into a process and then conveerted into js
+
+ts is a superset of js
+it has everything which js has with additional functionality
+
+generating doc in js is very not good
+but for ts it is best because it brings consistency to the table
+
+typeScript does not has an engine it runs on js V8 engine
+it just does two things
+typeChecker
+and consistency in js
+
+when we are using typescript with node/react we have to do things diffrenetly
+
+here we have not installed ts globally
+so let's run ts compiler
+npx tsc --init
+node package executor tscompiler(we get this by installing in ts) initialize
+
+after running this you will get a tsconfiguration file and ts project is initailized(started)
+
+typeAnnotation - we specifically or explicitly defines the type
+inference - type script itself gets the type on its own

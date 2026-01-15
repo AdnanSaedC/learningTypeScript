@@ -1,0 +1,37 @@
+lexer the job of lexer is tokenization
+
+int x=10:
+[int] [identifier:x] [=] [number:10] [;]
+it also check basic rules like semicolon etc
+
+parser the job of parser to check language grammer(indepth rules checking)
+it also create abstract syntax tree which is nothing but how thing are connected
+basically visualization
+x=10+2
+Assignment
+ ├── Variable: x
+ └── Add
+     ├── 10
+     └── 2
+
+
+
+binder the job of binder is to connect variables to its actual source scope resolution
+it also crates flow node(if this condition go this route)
+symbol tables this is nothing but the info about a particular variable
+x → {
+  kind: variable,
+  declaredAt: line 2,
+  scope: function add() 
+}
+
+
+checker - this checks the type(tries to maintain the consistency in data types across codes)
+sometimes short circuit happens which error already occured and checking the code again becomes meaningless
+mostly goes through the code twice
+
+and this part is removed and integrated with IDE thats why IDE gives error
+emitter which produces final js code by removing the extra things added by TS(node also does this and runs the typescript code natively in node)
+
+tscode -> lexer -> parser -> binder ->checker->enumerator(generator)->.js,(.d.ts,.map) these there files are generated
+
